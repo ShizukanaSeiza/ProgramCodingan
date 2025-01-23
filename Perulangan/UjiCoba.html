@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percobaan</title>
+</head>
+<body>
+        <h1>Deret Fibonacci</h1>
+        <p id="fibonacci"></p>
+
+    <script>
+        function generateFibonacci(n) {
+            let fib = [1, 1];
+            for (let i = 2; i < n; i++) {
+                fib[i] = fib[i - 1] + fib[i - 2];
+            }
+            return fib;
+        }
+
+        const fibonacciSeries = generateFibonacci(8);
+        document.getElementById("fibonacci").textContent = fibonacciSeries.join(", ");
+    </script>
+    
+    <h1>Deret Angka</h1>
+
+    <h2>Deret Bilangan Ganjil</h2>
+    <ul id="ganjil"></ul>
+
+    <h2>Deret Bilangan Genap</h2>
+    <ul id="genap"></ul>
+
+    <h2>Bilangan Prima</h2>
+    <ul id="prima"></ul>
+
+    <script>
+        // Fungsi untuk menghasilkan deret bilangan ganjil
+        function generateGanjil(n) {
+            let ganjil = [];
+            for (let i = 1; i <= n; i++) {
+                ganjil.push(i * 2 - 1);
+            }
+            return ganjil;
+        }
+
+        // Fungsi untuk menghasilkan deret bilangan genap
+        function generateGenap(n) {
+            let genap = [];
+            for (let i = 1; i <= n; i++) {
+                genap.push(i * 2);
+            }
+            return genap;
+        }
+
+        // Fungsi untuk memeriksa bilangan prima
+        function isPrime(num) {
+            if (num <= 1) return false;
+            for (let i = 2; i < num; i++) {
+                if (num % i === 0) return false;
+            }
+            return true;
+        }
+
+        // Fungsi untuk menghasilkan bilangan prima
+        function generatePrima(n) {
+            let prima = [];
+            let num = 2;
+            while (prima.length < n) {
+                if (isPrime(num)) {
+                    prima.push(num);
+                }
+                num++;
+            }
+            return prima;
+        }
+
+        // Menampilkan deret bilangan ganjil
+        const ganjil = generateGanjil(10);
+        const ganjilList = document.getElementById("ganjil");
+        ganjil.forEach((num) => {
+            const listItem = document.createElement("li");
+            listItem.textContent = num;
+            ganjilList.appendChild(listItem);
+        });
+
+        // Menampilkan deret bilangan genap
+        const genap = generateGenap(10);
+        const genapList = document.getElementById("genap");
+        genap.forEach((num) => {
+            const listItem = document.createElement("li");
+            listItem.textContent = num;
+            genapList.appendChild(listItem);
+        });
+
+        // Menampilkan bilangan prima
+        const prima = generatePrima(10);
+        const primaList = document.getElementById("prima");
+        prima.forEach((num) => {
+            const listItem = document.createElement("li");
+            listItem.textContent = num;
+            primaList.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>

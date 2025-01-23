@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perulangan While Atau Well</title>
+</head>
+<body>
+    <h1>Perulangan While Atau Well</h1>
+    <script langueage="Javascript">
+    var ulangi = confirm("Kurikaeshimasu ka?");
+    var counter = 0
+
+    while(ulangi){
+        var jawab = confirm("Kurikaeshimasu ka?")
+        counter++;
+        if(jawab == false){
+            ulangi = false;
+        }
+    }
+document.write("Kurikaeshi wa nan-kai demo okonawa remasu "+ counter +" jikan");
+    </script>
+</body>
+</html>

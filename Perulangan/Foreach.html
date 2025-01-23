@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perulangan Foreach</title>
+</head>
+<body>
+    <h1>Foreach Tanpa In</h1>
+    <script>
+        var languages = ["Bujang Biji", "Bujang Beji", "Bujang Bejir", "Bujang Anjir"];
+        for(Bujang = 0; Bujang < languages.length; Bujang++){
+            document.write(Bujang+". "+ languages[Bujang] + "<br/>");
+        }
+    </script>
+    <h3>Cara Sederhana Nya</h3>
+    <script>
+        var languages = ["Bujang Biji", "Bujang Beji", "Bujang Bejir", "Bujang Anjir"];
+
+        for(Bujang in languages){
+            document.write(Bujang+". "+ languages[Bujang] + "<br/>");
+        }
+    </script>
+    <h1>Method Foreach() Yang Memiliki Parameter Berupa Fungsi Callback</h1>
+    <script>
+        var zodiaks = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagitarius", "Capricorn", "Aquarius", "Pisces"];
+
+        zodiaks.forEach((zodiak)=> {
+            document.write("<p>" + zodiak + "</p>");
+        });
+    </script>
+</body>
+</html>
