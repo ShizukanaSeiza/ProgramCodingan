@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz <Tipis-Tipis></Tipis-Tipis></title>
+</head>
+<body>
+    <script>
+        var jasa = prompt("perusahaan salesman:");
+        var komisi = "";
+
+        if(jasa == 200000) komisi = 10000 + jasa * 10/100
+        else if(jasa >= 200000) komisi = 20000 + jasa * 15/100
+        else if(jasa >= 500000) komisi = 30000 + jasa * 20/100
+        else {
+            komisi = "Tidak mendapatkan apa apa";
+        }
+        document.write(`<p>Anda mendaptkan sekitar: ${komisi}</p>`);
+    </script>
+</body>
+</html>
