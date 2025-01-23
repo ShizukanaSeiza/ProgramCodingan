@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Kombinasi Animasi</title>
+    <script src="jquery37.js"></script>
+</head>
+<body>
+    <button id="combine">Mulai Animasi</button>
+    <div id="box" style="width: 100px; height: 100px; background: greenyellow"></div>
+
+
+    <script>
+        $(document).ready(function() {
+            $("#combine").click(function() {
+                $("#box").animate({left: "+=100px", width: "200px", height: "200px" }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>

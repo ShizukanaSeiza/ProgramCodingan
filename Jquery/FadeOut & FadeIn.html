@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Fade In dan Fade Out</title>
+    <script src="jquery37.js"></script>
+</head>
+<body>
+    <button id="FadeOut">Fade Out</button>
+    <button id="FadeIn">Fade In</button>
+    <div id="box" style="width: 100px; height: 100px; background: blueviolet;"></div>
+
+
+    <script>
+        $(document).ready(function() {
+            $("#FadeOut").click(function() {
+                $("#box").fadeOut(1000);
+            });
+            $("#FadeIn").click(function() {
+                $("#box").fadeIn(1000);
+            });
+        });
+    </script>
+</body>
+</html>

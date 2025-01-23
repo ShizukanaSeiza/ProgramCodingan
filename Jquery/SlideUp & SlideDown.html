@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Slide Up dan Slide Down</title>
+    <script src="jquery37.js"></script>
+</head>
+<body>
+    <button id="slideUp">Slide Up</button>
+    <button id="slideDown">Slide Down</button>
+    <div id="box" style="width: 100px; height: 100px; background:blue;"></div>
+
+
+    <script>
+        $(document).ready(function() {
+            $("#slideUp").click(function() {
+                $("#box").slideUp(1000);
+            });
+            $("#slideDown").click(function() {
+                $("#box").slideDown(1000);
+            });
+        });
+    </script>
+</body>
+</html>

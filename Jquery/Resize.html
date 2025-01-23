@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Animasi Ukuran</title>
+    <script src="jquery37.js"></script>
+</head>
+<body>
+    <button id="resize">Resize</button>
+    <div id="box" style="width: 100px; height: 100px; background: papayawhip;"></div>
+
+    
+    <script>
+        $(document).ready(function() {
+            $("#resize").click(function() {
+                $("#box").animate({width: "200px", height: "200px"}, 1000);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Soal Pertama</title>
+    <script src="jquery37.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#tombol").click(function(){
+            if ($("div.box").length >= 5) {
+                alert("Udah penuh sama punya mu kakak><");
+                return;
+            }
+            let divbaru = $('<div class="box" style="width: 100px; height: 100px; backgorund-color: red; margin-top: 10px; display: none;"></div')
+            $("body").append(divbaru);
+            divbaru.fadeIn("slow");
+
+            divbaru.click(function(){
+                $(this).fadeOut("slow", function(){
+                $(this).remove();
+                });  
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Ketika tombol disentuh muncul warna merah</h1>
+    <button id="tombol">Pegang punyaku mass</button>
+</body>
+</html>

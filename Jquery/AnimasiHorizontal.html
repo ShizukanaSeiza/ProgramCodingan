@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Animasi Horizontal</title>
+    <script src="jquery37.js"></script>
+</head>
+<body>
+    <button id="moveRight">Gerak Ke Kanan</button>
+    <div id="box" style="width: 50px; height: 50px; background: lightsalmon; position: absolute;"></div>
+
+
+    <script>
+        $(document).ready(function() {
+            $("#moveRight").click(function() {
+                $("#box").animate({left: "+=100px"}, 1000);
+            });
+        })
+    </script>
+</body>
+</html>
