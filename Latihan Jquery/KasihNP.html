@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <style>
+ div {
+ width: 300px;
+ height: 150px;
+ margin: 10px;
+ color: white;
+ text-align: center;
+ }
+ p{
+ position: absolute;
+ top: 0px;
+ left: 150px;
+ }
+ span{ color: white; }
+</style>
+<script src="jquery36.js"></script>
+</head>
+<body>
+ <div style="background-color: red;"></div>
+ <button id="red">Red</button>
+ <button id="green">Green</button>
+ <button id="blue">Blue</button>
+ <script>
+ $(function(){
+ $('button#red').click(function(){
+ $('div').css('background-color', 'red');
+ });
+ $('button#green').click(function(){
+ $('div').css('background-color', 'green');
+ });
+ $('button#blue').click(function(){
+ $('div').css('background-color', 'blue');
+ });
+ });
+ </script>
+</body>
+</html>

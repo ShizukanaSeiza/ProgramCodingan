@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <style>
+ div {
+ width: 100px;
+ height: 50px;
+ margin: 10px;
+ color: white;
+ text-align: center;
+ }
+ p{
+ position: absolute;
+ top: 0px;
+ left: 150px;
+ }
+ span{ color: white; }
+</style>
+<script src="jquery36.js"></script>
+</head>
+<body>
+ <div style="background-color: red;">Element Fire</div>
+ <div style="background-color: blue;">Element Water</div>
+ <div style="background-color: green;">Element Plant</div>
+ <p id="tes"></p>
+Prepared by
+Shizukana Seiza
+ <script>
+ $(function(){
+ $('div').click(function(){
+ var color = $(this).css('background-color');
+ $('#tes').html('<span style="background-color: '+color+'">&nbsp;RGB Color&nbsp;</span>:
+'+color);
+ });
+ });
+ </script>
+</body>
+</html>

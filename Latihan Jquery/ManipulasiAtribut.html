@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script src="jquery.js"></script>
+</head>
+<body>
+ <a href=" https://www.roblox.com">Roblox</a>
+ <br><br>
+ <button>Add/Update Attribute</button>
+ <script>
+ $(function(){
+ $('button').click(function(){
+ $('a').attr('href', 'https://www.roblox.com');
+ $('a').attr('target', '_blank');
+ $('a').text('Roblox');
+ });
+ });
+ </script>
+</body>
+</html>
+
