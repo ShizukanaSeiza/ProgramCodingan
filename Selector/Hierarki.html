@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hierarki</title>
+    <script src="jquery37.js"></script>
+</head>
+<body>
+<div>
+    <p>Danraku 1</p>
+    <span>Span 1</span>
+    <p>Danraku 2</p>
+</div>
+<button id="ubah">Ubah Warna</button>
+
+<script>
+    $(document).ready(function(){
+        $("#ubah").click(function(){
+            $("div > p").css("color","red"); // Hanya p di dalam div
+        });
+    });
+</script>

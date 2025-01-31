@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector Tag</title>
+    <script src="jquery37.js"></script>
+</head>
+<body>
+    
+
+    <p>Ichi</p>
+    <p>Ni</p>
+    <button id="btn">Ubah Warna</button>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("p").css("color","blue");
+            });
+        });        
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling jQuery</title>
+    <script src="jquery37.js"></script>
+    <style>
+        #box {
+        width: 200px;
+        height: 100px;
+        background-color: lightblue;
+        text-align: center;
+        line-height: 100px;
+        margin: 20px;
+        cursor: pointer;
+    }
+ </style>
+</head>
+<body>
+    
+
+    <button id="btnClick">Pegang Aku Mas</button>
+    <div id="box">Raba Atau Pegang Saya</div>
+     <input type="text" id="textInput" placeholder="Ketik sesuatu...">
+    
+    
+    <script>
+        $(document).ready(function() {
+          // Event klik pada tombol
+          $("#btnClick").click(function() {
+            alert("Tombol telah diklik!");
+        });
+ 
+        // Event hover pada div
+        $("#box").mouseenter(function() {
+          $(this).css("background-color", "yellow");
+        }).mouseleave(function() {
+          $(this).css("background-color", "lightblue");
+        });
+        // Event klik pada div
+        $("#box").click(function() {
+          $(this).text("Saya diklik!");
+        });
+        // Event keypress pada input
+        $("#textInput").keypress(function() {
+           $("#box").text("Anda mengetik: " + $(this).val());
+        });
+    });
+ </script>
+
+
+</body>
+</html>
