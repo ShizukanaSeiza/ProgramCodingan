@@ -1,0 +1,142 @@
+@font-face {
+    font-family: 'ahwas-font-black';
+    src: url(Masicu-Black.ttf);
+}
+@font-face {
+    font-family: 'satria-font-medium';
+    src: url(Masicu-Medium.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: satria-font-medium;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: white;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo h1 {
+    font-size: 2rem;
+    color: #ff6347;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+.hero {
+    background-image: url('Gif.gif');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.anime-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.anime-container .anime-card {
+    flex: 1 1 calc(20% - 10px);
+    margin: 20px;
+}
+
+.anime-card {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 30px;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s;
+}
+
+.anime-card:hover {
+    transform: scale(1.05);
+}
+
+.anime-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input, form button {
+    padding: 10px;
+    margin: 10px;
+    width: 80%;
+    max-width: 400px;
+}
+
+form button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #e5533d;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+video {
+    border-radius: 4px;
+    box-shadow: 5px 5px 15px rgba(130, 14, 134, 0.6);
+    border: #e5533d;
+}
