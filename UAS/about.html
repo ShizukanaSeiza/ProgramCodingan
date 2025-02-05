@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Manhwa dan Manga</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .card {
+            border: 1px solid #B2A5FF;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 16px;
+            width: 200px;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            width: 100%;
+            border-radius: 8px 8px 0 0;
+        }
+        .card-title {
+            font-size: 1.2em;
+            margin: 8px 0;
+        }
+        .card-description {
+            font-size: 0.9em;
+            color: black;
+        }
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .back-button {
+            display: block;
+            margin: auto;
+            padding: 5px 5px;
+            font-size: 1em;
+            background-color: #27445D;
+            color: #B2A5FF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+        /* Additional styles from index.html */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #27445D;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #27445D;
+            color: yellow;
+            padding: 10px 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        header h1 {
+            margin: 0;
+            margin-left: 10px;
+        }
+        nav {
+            background-color: #27445D;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px 0;
+        }
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+            nav a {
+                margin: 10px 0;
+            }
+            .hamburger {
+                display: flex;
+            }
+        }
+        .show {
+            display: flex !important;
+        }
+        .search-bar {
+            margin: 20px auto;
+            text-align: center;
+        }
+        .search-bar input {
+            padding: 10px;
+            width: 80%;
+            max-width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Tachiyomi.jpeg" alt="Logo" width="50" height="50">
+        <h1>Daftar Manhwa dan Manga</h1>
+    </header>
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <nav id="nav-menu">
+        <a href="index.html">Beranda</a>
+        <a href="about.html">Manhwa & Manga</a>
+        <a href="sinopsis.html">Sinopsis</a>
+    </nav>
+    <div class="search-bar">
+        <input type="text" id="searchInput" onkeyup="searchCards()" placeholder="Cari Manhwa atau Manga...">
+    </div>
+    <div class="card-container" id="cardContainer">
+        <div class="card">
+            <img src="Raviel.jpeg" alt="Manhwa 1">
+            <div class="card-title">SSS-Class Suicide Hunter</div>
+            <div class="card-description">Menceritakan kisah seorang pria bernama Jinwoo, 
+                yang awalnya adalah seorang "suicide hunter" atau pemburu bunuh diri di dunia yang penuh dengan monster dan kekacauan. 
+                Di dunia tersebut, muncul berbagai monster dan manusia yang memiliki kemampuan super (kelas S) setelah dimunculkan oleh fenomena aneh yang disebut "Dungeons." 
+                Untuk bertahan hidup, orang-orang sering kali terjebak dalam permainan hidup dan mati dengan monster.</div>
+        </div>
+        <div class="card">
+            <img src="Euhh.jpeg" alt="Manhwa 2">
+            <div class="card-title">Magic Emperor</div>
+            <div class="card-description">Menceritakan kisah Han Lee, seorang penyihir yang sangat kuat di dunia sihir, 
+                tetapi dikhianati oleh orang-orang yang ia percayai dan dibunuh dengan cara yang sangat tragis. Setelah kematiannya, ia terlahir kembali ke masa mudanya, 
+                tepat saat ia masih seorang pemuda yang lemah dan tidak memiliki kekuatan sihir yang luar biasa seperti sebelumnya.
+                Dengan ingatannya yang utuh tentang semua kemampuan dan pengetahuan sihir yang dia miliki di kehidupan sebelumnya, Han Lee bertekad untuk membalas dendam 
+                pada mereka yang telah mengkhianatinya.</div>
+        </div>
+        <div class="card">
+            <img src="wow.jpeg" alt="Manga 3">
+            <div class="card-title">Date A Live</div>
+            <div class="card-description">bercerita tentang seorang pemuda bernama Shido Itsuka yang hidup di dunia yang sering dilanda serangan dari makhluk 
+                misterius bernama Spirits. Spirits adalah entitas yang sangat kuat dan dapat menghancurkan kota-kota. Suatu hari, Shido bertemu dengan seorang Spirit bernama Tohka Yatogami, 
+                yang tiba-tiba muncul dan menyebabkan kehancuran besar. Untuk menghentikan kerusakan yang disebabkan oleh para Spirits, Shido menemukan cara untuk "menyegel" kekuatan para 
+                Spirit dengan cara membuat mereka jatuh cinta padanya. Shido harus berkencan dengan setiap Spirit yang muncul, sehingga mereka jatuh cinta dan dengan demikian, kekuatan mereka akan terkunci.</div>
+        </div>
+        <div class="card">
+            <img src="ZeroTwo.jpeg" alt="Manga 4">
+            <div class="card-title">Darling In The FranXX</div>
+            <div class="card-description">Cerita yang berlatar di dunia post-apokaliptik, di mana umat manusia tinggal di kota-kota yang terisolasi karena dunia luar telah dihancurkan 
+                oleh makhluk raksasa yang disebut Klaxosaurs. Untuk melindungi umat manusia, anak-anak muda dilatih untuk mengendalikan mesin perang raksasa yang disebut Franxx, yang hanya dapat dijalankan oleh 
+                pasangan pria dan wanita. Cerita berfokus pada seorang remaja bernama Hiro, yang dulunya adalah pilot berbakat, namun kehilangan kepercayaan diri setelah gagal dalam misi dan dianggap tidak berguna. 
+                </div>
+        </div>
+        <div class="card">
+            <img src="slime.jpeg" alt="Manga 5">
+            <div class="card-title">Tensei Shitara Slime Datta Ken</div>
+            <div class="card-description">Bercerita tentang Satoru Mikami, seorang pria biasa yang bekerja di sebuah perusahaan. Suatu hari, dia dibunuh dalam sebuah insiden, 
+                dan terlahir kembali ke dunia fantasi sebagai seekor slime, makhluk paling lemah dalam dunia tersebut. Namun, slime yang dia jadi ternyata memiliki kemampuan luar biasa yang disebut Predator, yang memungkinkan dia 
+                untuk menyerap kekuatan dan kemampuan dari makhluk lain. Setelah terlahir kembali sebagai slime, Satoru yang kini dikenal dengan nama Rimuru Tempest, memulai petualangan di dunia baru tersebut. Dia berusaha untuk 
+                menciptakan dunia yang damai dan adil.</div>
+        </div>
+        <div class="card">
+            <img src="sword.jpeg" alt="Manga 6">
+            <div class="card-title">Sword Art Online</div>
+            <div class="card-description">Bercerita tentang Kirito, seorang remaja yang terjebak dalam permainan virtual reality MMORPG bernama Sword Art Online. Saat permainan baru diluncurkan, para pemain 
+                tidak menyadari bahwa mereka tidak bisa keluar dari permainan tersebut. Pembuat game, Akihiko Kayaba, mengungkapkan bahwa mereka hanya dapat keluar jika berhasil menaklukkan semua level dalam game, dan jika mereka 
+                mati dalam permainan, mereka juga akan mati di dunia nyata. Kirito, yang awalnya bermain sendirian, memutuskan untuk bertarung sendirian dan berusaha bertahan hidup untuk melarikan diri. Namun, seiring berjalannya waktu, 
+                dia bertemu dengan berbagai pemain lain, termasuk Asuna, seorang pemain perempuan yang juga sangat terampil.</div>
+        </div>
+        <div class="card">
+            <img src="wkwk.jpeg" alt="Manhwa 7">
+            <div class="card-title">Lightning Degree</div>
+            <div class="card-description">Bercerita tentang Jinwoo, seorang pemuda yang hidup di dunia penuh dengan pertarungan dan sihir. Meskipun ia tampak seperti orang biasa pada awalnya, ia memiliki potensi luar biasa 
+                yang dapat membuatnya sangat kuat. Dalam dunia ini, setiap individu memiliki kemampuan dan kekuatan yang dapat meningkat melalui latihan dan pengalaman bertarung. Jinwoo awalnya merasa terjebak dalam kekurangan kekuatan dan kemampuan, 
+                tetapi segalanya berubah saat ia mendapatkan sebuah kesempatan untuk melatih dirinya dengan cara yang sangat unik dan intens. Dengan tekad dan usaha keras, ia mulai mengembangkan kekuatan yang tak terbayangkan sebelumnya.</div>
+        </div>
+        <div class="card">
+            <img src="shirone.jpeg" alt="Manhwa 8">
+            <div class="card-title">Infinite Mage</div>
+            <div class="card-description">Bercerita tentang Shirone, seorang pemuda yang terlahir dalam keluarga yang sangat kuat dan berbakat dalam sihir. Meskipun memiliki potensi besar, Shirone terlahir dengan kekuatan yang terbatas dan selalu 
+                dianggap lemah. Suatu hari, dia diberikan kesempatan untuk mendapatkan kekuatan tak terbatas setelah mengalami kejadian yang mengubah hidupnya. Setelah memperoleh kemampuan baru, Shirone mulai mengembangkan sihir yang sangat kuat dan berusaha menguasai 
+                kekuatan yang terus berkembang tanpa batas. Seiring perjalanan cerita, dia berhadapan dengan berbagai musuh dan ancaman, serta menjelajahi misteri kekuatan tak terbatas yang ia miliki.</div>
+        </div>
+        <div class="card">
+            <img src="spirit.jpeg" alt="Manhwa 9">
+            <div class="card-title">Seirei Gensouki</div>
+            <div class="card-description">Bercerita tentang Rio, seorang pemuda yang terlahir di dunia fantasi setelah mengalami kehidupan tragis di dunia sebelumnya. Di kehidupan lamanya, Rio adalah seorang pemuda Jepang yang dibunuh, 
+                dan setelah itu, dia terlahir kembali sebagai anak dari seorang wanita miskin di dunia baru yang penuh dengan sihir dan roh. Saat masih kecil, Rio kehilangan ibunya, dan dia diperlakukan dengan buruk oleh keluarga angkatnya. Namun, ia memiliki kekuatan 
+                luar biasa yang tersembunyi, hasil dari ingatan dan kekuatan dari kehidupan sebelumnya.</div>
+        </div>
+        <div class="card">
+            <img src="kizoku.jpeg" alt="Manhwa 10">
+            <div class="card-title">Sekai Saikō no Ansatsusha, Isekai Kizoku ni Tensei suru</div>
+            <div class="card-description">Bercerita tentang seorang pembunuh legendaris yang dikenal sebagai Lugh. Setelah menyelesaikan misi terakhirnya, Lugh terbunuh dan terlahir kembali ke dunia lain sebagai seorang anak dari keluarga bangsawan kaya.
+                Di kehidupan barunya, dia dilahirkan dengan nama Lugh Tuatha Dé, dan dia diberi kesempatan untuk menjalani kehidupan yang berbeda. Namun, meskipun terlahir sebagai bangsawan, Lugh masih memiliki tujuan yang sama: menjadi pembunuh yang paling kuat 
+                dan menghabisi musuh-musuhnya, sambil menggunakan kecerdasannya dan keterampilan membunuh yang luar biasa.</div>
+        </div>
+        <div class="card">
+            <img src="son.jpeg" alt="Manhwa 11">
+            <div class="card-title">Swordmaster's Youngest Son</div>
+            <div class="card-description">Bercerita tentang Jin Runcandel, putra bungsu dari keluarga terkenal dan sangat kuat, keluarga Runcandel, yang merupakan keturunan dari seorang pedang master legendaris. Jin, meskipun dilahirkan dalam keluarga yang sangat dihormati, 
+                diperlakukan dengan buruk karena ia dianggap sebagai anak yang tidak memiliki bakat atau kemampuan seperti saudara-saudaranya yang lebih tua. Akibatnya, ia merasa terpinggirkan dan diperlakukan sebagai beban keluarga.
+                Namun, setelah sebuah peristiwa besar, Jin mendapatkan kesempatan kedua untuk hidup di dunia yang sama, tetapi kali ini dia memiliki kesempatan untuk mengubah nasibnya. Dengan ingatan dan pengetahuan dari kehidupan sebelumnya.</div>
+        </div>
+        <div class="card">
+            <img src="novel.jpeg" alt="Manhwa 12">
+            <div class="card-title">The Novel Extra(Remake)</div>
+            <div class="card-description">Bercerita tentang Kim Hajin, seorang pemuda yang tiba-tiba terjebak dalam dunia novel yang ia baca. Namun, dia tidak menjadi tokoh utama atau bahkan karakter penting, melainkan hanya seorang "extra" yang tidak 
+                memiliki pengaruh besar dalam cerita. Pada awalnya, dia merasa terperangkap dalam dunia yang tidak dikenal, di mana semua peristiwa sudah ditentukan sesuai alur cerita novel tersebut. Namun, setelah mengetahui bahwa dia memiliki kesempatan untuk mengubah nasibnya, 
+                Kim Hajin mulai mencari cara untuk bertahan hidup dan bahkan memanfaatkan kesempatan ini untuk mendapatkan kekuatan dan mempengaruhi dunia di sekitarnya.</div>
+        </div>
+        
+    <a href="index.html" class="back-button">Kembali ke beranda</a>
+    <script>
+        function toggleMenu() {
+            var navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('show');
+        }
+    </script>
+     <footer class="text-center mt-5">
+        <center><p>&copy; Tachiyomi, Tempatnya membaca manhwa dan manga!</p></center>
+    </footer>
+    
+    <center><script src="https://code.jquery.com/jquery-3.6.0.min.js"></script></center>
+    <center><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script></center>
+    <center><script src="assets/js/script.js"></script></center>
+</body>
+</html>
