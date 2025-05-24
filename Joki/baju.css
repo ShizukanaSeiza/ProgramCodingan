@@ -1,0 +1,117 @@
+
+    form label {
+        color: #d9534f; /* Ganti warna sesuai keinginan: bisa #ff69b4, white, dll */
+        font-weight: bold;
+    }
+
+    form {
+        color: #d9534f; /* Mengubah semua teks di form */
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+
+    h2 {
+        color: #85193C;
+    }
+
+    form {
+        background: #273F4F;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        margin: 20px auto;
+    }
+
+    input[type="text"], select, textarea {
+        width: calc(100% - 20px);
+        padding: 8px 10px;
+        margin: 10px 0;
+        border: 1px solid #85193C;
+        border-radius: 4px;
+    }
+
+    input[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    .request-list p {
+        background: #85193C;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin: 10px auto;
+        max-width: 400px;
+    }
+    body {
+        background-image: url('game.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+
+    .request-list a {
+        color: #d9534f;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .request-list a:hover {
+        text-decoration: underline;
+    }
+
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+     
+        z-index: -2;
+    }
+
+    .star {
+        position: fixed;
+        color: #d9534f;
+        animation: fall 4s linear infinite, twinkle 2s ease-in-out infinite;
+        z-index: 0;
+        pointer-events: none;
+        font-family: Arial, sans-serif;
+      }
+      
+    
+    @keyframes fall {
+        0% {
+            transform: translateY(-100vh) rotate(0deg);
+        }
+        100% {
+            transform: translateY(100vh) rotate(360deg);
+            opacity: 0;
+        }
+    }
+    
+
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    
